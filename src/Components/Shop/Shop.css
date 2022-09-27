@@ -21,18 +21,30 @@
     gap: 0.5rem;
 }
 
-.products > div button {
-    border: 1px solid black;
-    padding: 0.5rem 1rem;
-}
-
 .products select {
     border: 1px solid black;
     padding: 0.5rem;
 }
 
-.products > div button.selected {
-    background-color: orange;
+.pagination-btn {
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: lightgray;
+}
+
+.pagination-btn.selected {
+    color: white;
+}
+
+.pagination-select {
+    width: 4rem !important;
 }
 
 .cart {

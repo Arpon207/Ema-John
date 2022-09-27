@@ -59,6 +59,10 @@
     font-weight: 600;
 }
 
+.delivery {
+    font-weight: 500;
+}
+
 .methods {
     display: flex;
     justify-content: space-between;

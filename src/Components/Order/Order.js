@@ -14,7 +14,6 @@ const Order = () => {
 
     const handleRemoveItem = (selectedProduct) => {
         const rest = cart.filter((pd) => pd._id != selectedProduct._id);
-        console.log(rest);
         setCart(rest);
         removeItem(selectedProduct._id);
     };

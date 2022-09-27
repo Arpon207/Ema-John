@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 const useToken = (user) => {
     const [token, setToken] = useState("");
-    console.log(user);
     useEffect(() => {
         const email = user?.user?.email;
         if (email) {
@@ -20,7 +19,6 @@ const useToken = (user) => {
             getToken();
         }
     }, [user]);
-    console.log(token);
     return [token];
 };
 

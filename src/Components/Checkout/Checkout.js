@@ -191,6 +191,7 @@ const Checkout = () => {
                         <p>Grand Total:</p>
                         <p>$ {grandTotal}</p>
                     </div>
+                    <p className="delivery">Delivers in: 3-7 Working Days.</p>
                     <div>
                         <h3 className="fs-5">Payment Methods</h3>
                         <div className="methods">

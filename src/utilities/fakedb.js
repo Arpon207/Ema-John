@@ -24,7 +24,6 @@ const removeItem = (id) => {
     const exists = getStoredCart();
     if (exists) {
         delete exists[id];
-        console.log(exists[id]);
         localStorage.setItem("shopping-cart", JSON.stringify(exists));
     }
 };

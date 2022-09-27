@@ -66,7 +66,6 @@ const SignUp = () => {
         }
     };
     const handlePassBlur = (e) => {
-        console.log(e.target.value);
         if (/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(e.target.value)) {
             setPassword({
                 value: e.target.value,

@@ -5,6 +5,8 @@ import Cart from "./Cart/Cart";
 import { addToDb, removeDB } from "../../utilities/fakedb";
 import { StateContext } from "./../../App";
 import useCart from "../../Hooks/useCart";
+import { Form } from "react-bootstrap";
+import useProducts from "../../Hooks/useProducts";
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
@@ -13,6 +15,22 @@ const Shop = () => {
     const [pageCount, setPageCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(0);
     const [productCount, setProductCount] = useState(10);
+    const [pd] = useProducts();
+
+    const handleSetPage = (number) => {
+        setCurrentPage(number);
+        window.scrollTo(0, 0);
+    };
+
+    const handleSetProductCount = (e) => {
+        const SelectedValue = parseInt(e.target.value);
+        setProductCount(e.target.value);
+        if (SelectedValue === 20 || SelectedValue === 15) {
+            setCurrentPage(Math.ceil(pd.length / SelectedValue) - 1);
+        }
+        window.scrollTo(0, 0);
+    };
+
     useEffect(() => {
         const url = `https://ema-john207.herokuapp.com/products?page=${currentPage}&productCount=${productCount}`;
         fetch(url)
@@ -80,23 +98,33 @@ const Shop = () => {
                         />
                     ))}
                 </section>
-                <div>
+                <div className="pagination">
                     {[...Array(pageCount).keys()].map((number) => (
                         <button
-                            className={currentPage === number ? "selected" : ""}
-                            onClick={() => setCurrentPage(number)}
+                            className={
+                                currentPage === number
+                                    ? "pagination-btn selected"
+                                    : "pagination-btn"
+                            }
+                            onClick={() => handleSetPage(number)}
                             key={number}
                         >
                             {number + 1}
                         </button>
                     ))}
-                    <select onChange={(e) => setProductCount(e.target.value)}>
+                    <Form.Select
+                        onChange={handleSetProductCount}
+                        className="pagination-select"
+                        size="sm"
+                    >
                         <option value={10} selected>
                             10
                         </option>
                         <option value={15}>15</option>
-                        <option value={20}>20</option>
-                    </select>
+                        <option value={20} onSelect={() => handleSetPage(0)}>
+                            20
+                        </option>
+                    </Form.Select>
                 </div>
             </div>
             <div
