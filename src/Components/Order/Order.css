@@ -1,0 +1,30 @@
+.order-review-container{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 2fr 1fr;
+    margin: 80px 150px;
+}
+
+.review-items-container{
+    margin: 45px 100px 0px 100px;
+}
+
+
+@media screen and (max-width: 688px) {
+    .order-review-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    gap: 0px;
+    }
+    .review-items-container{
+        margin: 0;
+        order: 2;
+    }
+
+    .review-cart-container{
+        position: sticky;
+        top: 73px;
+    background-color: #ffe0b3;
+    }
+}

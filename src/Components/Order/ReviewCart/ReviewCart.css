@@ -1,0 +1,53 @@
+.review-order-summary {
+  background-color: #ffe0b3;
+  border-radius: 10px;
+  position: sticky;
+  top: 220px;
+}
+
+.review-order-summary h2 {
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.review-order-summary p,
+.review-order-summary h4 {
+  padding-left: 40px;
+  margin-bottom: 50px;
+}
+
+.review-order-summary > .button2 {
+  padding: 20px;
+}
+
+.review-order-summary button {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 688px) {
+  .review-order-summary h2 {
+    margin: 5px;
+    padding-top: 0px;
+    font-size: 30px;
+  }
+
+  .review-order-summary p,
+  .review-order-summary h4 {
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+
+  .review-order-summary > .button2 {
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 15px;
+  }
+}

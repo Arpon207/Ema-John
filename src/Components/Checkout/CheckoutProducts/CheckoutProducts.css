@@ -1,0 +1,8 @@
+.checkout-product{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.checkout-product p:nth-child(2){
+    text-align: center;
+}

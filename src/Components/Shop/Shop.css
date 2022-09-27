@@ -1,0 +1,118 @@
+.shop {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.products {
+    margin-bottom: 2rem;
+}
+
+.products section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 100px;
+}
+
+.products > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.products > div button {
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+.products select {
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+.products > div button.selected {
+    background-color: orange;
+}
+
+.cart {
+    background-color: #ffe0b3;
+    position: sticky;
+    top: 70px;
+    height: 100vh;
+}
+
+@media screen and (max-width: 688px) {
+    .shop {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .products section {
+        grid-template-columns: repeat(1, 1fr);
+        order: 2;
+        padding: 50px;
+    }
+
+    .cart-open {
+        position: fixed;
+        display: block;
+        width: 80%;
+        background-color: #ffe0b3;
+        height: 100vh;
+        z-index: 1;
+        right: 0;
+    }
+
+    .cart-closed {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 689px) and (max-width: 750px) {
+    .shop {
+        grid-template-columns: 3.5fr 1.5fr;
+    }
+    .products section {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 850px) {
+    .shop {
+        grid-template-columns: 3.5fr 1.5fr;
+    }
+    .products section {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px 90px;
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1085px) {
+    .shop {
+        grid-template-columns: 4fr 1fr;
+    }
+    .products section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width: 1086px) and (max-width: 1200px) {
+    .products section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 80px;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1350px) {
+    .products section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (min-width: 1351px) and (max-width: 1500px) {
+    .products section {
+        padding: 50px 50px;
+    }
+}

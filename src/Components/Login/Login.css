@@ -1,0 +1,130 @@
+.login * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    border: 1px solid gray;
+    width: 450px;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    box-shadow: -0.5rem 0.5rem #ff9900;
+    height: fit-content;
+    margin: 3rem 0;
+}
+
+.login-card h1 {
+    text-align: center;
+    color: #2a414f;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-box input {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #95a0a7;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.login-card-button {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.btn-clr {
+    background-color: #ff9900;
+}
+
+.login-card button {
+    margin-bottom: 1rem;
+}
+
+.login-card p {
+    text-align: center;
+    margin: 0;
+}
+
+.login-card p button {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: #ff9900;
+    font-size: 0.9rem;
+}
+
+.login-card p button:hover {
+    color: blue;
+}
+
+.alternative {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.alternative p {
+    background-color: white;
+    position: relative;
+    width: 2rem;
+    z-index: 2;
+}
+
+.alternative div {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    height: 1px;
+    background-color: black;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid #95a0a7;
+    background: none;
+}
+
+.error-message {
+    color: red;
+    padding-left: 0.5rem;
+    margin: 0;
+    font-size: 0.8rem;
+    text-align: left !important;
+}
+
+/*----------------------Media Queries for small devices--------------*/
+
+@media screen and (max-width: 668px) {
+    .login-card-container {
+        min-height: unset;
+    }
+    .login-card {
+        width: 100%;
+        border-radius: 0rem;
+    }
+}

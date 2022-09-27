@@ -1,0 +1,39 @@
+.my-orders {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.order-list {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.order-list:hover {
+    outline: 1px solid orange;
+}
+
+.ordered_product-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3rem;
+    background-color: orange;
+    padding: 0.3rem;
+}
+
+.ordered_product-images div {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.order-list p {
+    padding: 0;
+    margin: 0;
+}
